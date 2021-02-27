@@ -1,9 +1,20 @@
 package appli;
 
+import static appli.Pioche.setNbCartesPioche;
+
 public class Jeu {
-	public static void main(String[] args) {
-		kbjhhjbjh
-		
-	}
+
+    private void commencerLapartie() {
+
+
+        setNbCartesPioche(54);
+
+
+
+
+
+
+    }
+
 
 }
