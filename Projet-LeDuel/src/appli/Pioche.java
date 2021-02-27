@@ -6,37 +6,34 @@ import java.util.Random;
 public class Pioche {
 
 
-    private static int NbCartesPioche = 60;
+    public static int NbCartesPiocheNord = 60;
+    private static int NbCartesPiocheSud = 60;
     private ArrayList<Integer> piocheNord = new ArrayList<Integer>();
     private ArrayList<Integer> piocheSud = new ArrayList<Integer>();
 
 
     private void InitaliserLesCartes() {
-        NbCartesPioche = 56;
+        //NbCartesPioche = 56;
         for(int i = 2; i <= 59; i++) {
             piocheNord.add(i);
         }
-        // mélanger
+        melangerLesCartes();
     }
 
 
-    public void AfficherList() {
+    public void afficherList() { // test
         for(int i = 0; i < piocheNord.size(); i++) {
             System.out.println(piocheNord.get(i));
         }
 
     }
 
-    private static void MelangerLesCartes() {
+    private static void melangerLesCartes() {
         int x;
         Random random = new Random();
         x = random.nextInt(59)+2;
     }
 
-
-    public static void getMelangerLesCartes() {
-        return MelangerLesCartes;
-    }
 
     public static void setNbCartesPioche(int CartesPioche) {
         NbCartesPioche = CartesPioche;
@@ -44,17 +41,21 @@ public class Pioche {
 
 
 
-    public static void piocherDesCartes{
-
-
-
-        if(NbCartesPioche == 0){
-            piocheEpuisee();
-        }
+    private void piocherDesCartes(){
+    	
+    	piocheEpuisee();
     }
+    
 
-    public static void piocheEpuisee{
-        System.out.println("La partie est perdu");
+    private void piocheEpuisee(){
+    	if(piocheNord.isEmpty()) {
+    		System.out.println("partie finie, SUD a gagné");
+    	}
+    	else if(piocheSud.isEmpty()) {
+            System.out.println("partie finie, NORD a gagné");
+    	}
+    	
     }
+    
 }
 

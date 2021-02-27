@@ -6,7 +6,8 @@ import static appli.Pioche.*;
 
 public class Joueur {
 
-    private static int nbCartesEnMain;
+    private static int nbCartesEnMainNord;
+    private static int nbCartesEnMainSud;
     private ArrayList<Integer> cartesEnMain;
 
     private String nom;
@@ -25,8 +26,8 @@ public class Joueur {
         pileDescendanteNord = 60;
         pileAscendanteSud = 1;
         pileDescendanteSud = 60;
-        ArrayList<Integer> cartesEnMain = new ArrayList<Integer>();
-
+        ArrayList<Integer> cartesEnMainNord = new ArrayList<Integer>();
+        ArrayList<Integer> cartesEnMainSud = new ArrayList<Integer>();
     }
 
 
@@ -52,9 +53,10 @@ public class Joueur {
 
     @Override
     public String toString() {
-
-
-        return super.toString();
+    	String nord =  "NORD"+" "+ "^" + "["+ pileAscendanteNord + "]" + "v" + "["+ pileDescendanteNord + "]" + " " + "(m" + nbCartesEnMainNord + "p" + NbCartesPiocheNord + ")";
+    	String sud =  "SUD"+" "+ "^" + "["+ pileAscendanteSud + "]" + "v" + "["+ pileDescendanteSud + "]" + " " + "(m" + nbCartesEnMainSud + "p" + NbCartesPiocheSud + ")"; 
+    	String cartesNord = "cartes NORD {" + piocheNord.get(0) + piocheNord.get(1) + piocheNord.get(2) + piocheNord.get(3) + piocheNord.get(4) + piocheNord.get(5);
+    	return nord + sud;
     }
 
     /*
