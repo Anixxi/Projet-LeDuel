@@ -14,6 +14,16 @@ public class Jeu {
 
     private void commencerLapartie() {
         Jeu duel = new Jeu("NORD","SUD");
+        ArrayList<Integer> cartesJoueur1 = new ArrayList<>();
+        Joueur CartesJoueur1 = new Joueur(cartesJoueur1);
+
+
+        Joueur CartesJoueur2 = new Joueur(new ArrayList<Integer>());
+        cartesJoueur1.get()
+
+    }
+
+    private void gagnerUnePartie() {
 
     }
 

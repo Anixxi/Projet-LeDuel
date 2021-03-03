@@ -2,41 +2,42 @@ package appli;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class Pioche {
 
-    private ArrayList <Integer> piocheNord = new ArrayList<Integer>();
-    private ArrayList <Integer> piocheSud = new ArrayList<Integer>();
+    private ArrayList<Integer> piocheNord;
+    private ArrayList<Integer> piocheSud;
 
-    public Pioche(ArrayList<Integer> pioche){
+    public Pioche(){
+        piocheNord = new ArrayList<>();
+        piocheSud = new ArrayList<>();
 
     }
 
     private void initaliserLesCartes() {
         for(int i = 2; i < 60; i++) {
             piocheNord.add(i);
+            piocheSud.add(i);
         }
         Collections.shuffle(piocheNord);
         Collections.shuffle(piocheSud);
     }
 
-
-    public void afficherList() { // test
-        for(int i = 0; i < piocheNord.size(); i++) {
-            System.out.println(piocheNord.get(i));
-        }
-
+    private int piocheTailleSud() {
+        return piocheSud.size();
     }
 
-    private void piocheEpuisee(){
-        if(piocheNord.isEmpty()) {
-            System.out.println("partie finie, SUD a gagné");
-        }
-        else if(piocheSud.isEmpty()) {
-            System.out.println("partie finie, NORD a gagné");
-        }
-
+    private int piocheTailleNord() {
+        return piocheNord.size();
     }
+
+    public int piocherCartesNord() {
+        return piocheNord.get(0);
+    }
+
+    public int piocherCartesSud() {
+        return piocheSud.get(0);
+    }
+
 
 }
