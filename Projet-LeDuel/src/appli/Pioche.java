@@ -5,8 +5,8 @@ import java.util.Collections;
 
 public class Pioche {
 
-    private ArrayList<Integer> piocheNord;
-    private ArrayList<Integer> piocheSud;
+    private static ArrayList<Integer> piocheNord;
+    private static ArrayList<Integer> piocheSud;
 
     public Pioche(){
         piocheNord = new ArrayList<>();
@@ -14,7 +14,7 @@ public class Pioche {
 
     }
 
-    private void initaliserLesCartes() {
+    public void initaliserLesCartes() {
         for(int i = 2; i < 60; i++) {
             piocheNord.add(i);
             piocheSud.add(i);
@@ -23,19 +23,19 @@ public class Pioche {
         Collections.shuffle(piocheSud);
     }
 
-    private int piocheTailleSud() {
+    public int piocheTailleSud() {
         return piocheSud.size();
     }
 
-    private int piocheTailleNord() {
+    public int piocheTailleNord() {
         return piocheNord.size();
     }
 
-    public int piocherCartesNord() {
+    public static int piocherCartesNord() {
         return piocheNord.get(0);
     }
 
-    public int piocherCartesSud() {
+    public static int piocherCartesSud() {
         return piocheSud.get(0);
     }
 

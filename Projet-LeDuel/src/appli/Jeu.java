@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class Jeu {
 
-    private static String nomJoueur1;
-    private static String nomJoueur2;
+    private static Joueur Joueur1;
+    private static Joueur Joueur2;
+    private static boolean joueurGagnant;
 
-    public Jeu(String nomJoueur1, String nomJoueur2){
-        this.nomJoueur1 = nomJoueur1;
-        this.nomJoueur2 = nomJoueur2;
+    public Jeu(Joueur NORD, Joueur SUD){
+        this.Joueur1 = NORD;
+        this.Joueur2 = SUD;
     }
 
     private void commencerLapartie() {
@@ -19,11 +20,12 @@ public class Jeu {
 
 
         Joueur CartesJoueur2 = new Joueur(new ArrayList<Integer>());
-        cartesJoueur1.get()
+
 
     }
 
-    private void gagnerUnePartie() {
+    private void coupValide() {
+
 
     }
 
